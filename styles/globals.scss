@@ -1,0 +1,42 @@
+.meeting-screen {
+  background-image: url('/main.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  .left {
+    background: #297fb9b2;
+    padding: 0;
+    height: 100%;
+    .logo {
+      width: 100%;
+      height: 10%;
+      border-bottom: 1px solid rgb(255, 255, 255);
+      img{
+        height: 100%;
+        padding: 1%;
+      }
+    }
+  }
+  .right{
+    background: rgba(0, 0, 0, 0.096);
+    padding: 0;
+    height: 100%;
+    .right-detail{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: white;     
+      .des{
+        margin: 5%;
+        width: 100%;
+        background: #297fb99a;
+        border-radius: 5px;   
+        img{
+          width: 30%;
+        }
+      
+      }
+    }
+  }
+}
