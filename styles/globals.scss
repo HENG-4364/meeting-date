@@ -24,15 +24,19 @@ body {
     .left-detail {
       display: flex;
       align-items: center;
-      padding: 50px;
+      padding: 20px 20px 0 20px;
       .des {
         background: white;
-        border-radius: 5px;
+        border-left: 15px solid red;
+        border-radius: 0 5px 5px 0;
         width: 100%;
         .meeting-info-container {
           width: 100%;
           overflow: hidden;
           word-wrap: break-word;
+          h4{
+            line-height: 32px;
+          }
         }
 
         img {
@@ -51,7 +55,7 @@ body {
     }
   }
   .right {
-    background: rgba(0, 0, 0, 0.096);
+    background: rgba(0, 0, 0, 0.301);
     padding: 0;
     height: 100%;
     .right-detail {

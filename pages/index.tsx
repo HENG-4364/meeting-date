@@ -1,7 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import { Badge } from 'react-bootstrap';
-import { FaRegUserCircle, FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
+import {
+  FaRegUserCircle,
+  FaMapMarkerAlt,
+  FaRegClock,
+  FaCalendar,
+} from 'react-icons/fa';
 import { BiMap } from 'react-icons/Bi';
 export default function Home() {
   return (
@@ -29,21 +34,29 @@ export default function Home() {
                           កិច្ចប្រជុំបន្ទាប់
                         </Badge>
                       </span>
-                      <span className='ms-2'>
-                        <FaRegClock />
-                        <span> 8:00AM-10:00AM</span>
+                      <span className="ms-2">
+                        <FaRegClock size={20} />
+                        <span> ម៉ោង: <b>8:00AM-10:00AM</b></span>
                       </span>
                     </div>
-                    <h4 className="mt-1">កិច្ចប្រជុំពាណិជ្ជកម្មអន្តរជាតិ </h4>
-                    <p className="meeting-date">
-                      ថ្ងៃច័ន្ទ ទី១៦​ ខែកុម្ភះ​ ឆ្នាំ​២០២៣
-                    </p>
+                    <h4 className="mt-1">
+                      កិច្ចប្រជុំពាណិជ្ជកម្មអន្តរជាតិ ជាមួយប្រទេស ចិន និង
+                      ជ្រើសរើសភ្នាក់ងារ
+                    </h4>
+                    <div>
+                      <span>
+                        <FaCalendar size={20} />
+                      </span>
+                      <span className="meeting-date ms-3">
+                        ថ្ងៃច័ន្ទ ទី១៦​ ខែកុម្ភះ​ ឆ្នាំ​២០២៣
+                      </span>
+                    </div>
                     <p></p>
                     <hr style={{ border: '1px solid #ced6e0' }} />
                     <div className="d-flex align-items-center justify-content-between">
                       <div>
                         <span className="me-2 ">
-                          <FaRegUserCircle size={20}/>
+                          <FaRegUserCircle size={20} />
                         </span>
                         <span>
                           ប្រធានអង្គប្រជុំ: <b> Mr.Sok Dara</b>
@@ -51,7 +64,7 @@ export default function Home() {
                       </div>
                       <div>
                         <span className="me-2">
-                          <FaMapMarkerAlt size={20}/>
+                          <FaMapMarkerAlt size={20} />
                         </span>
                         <span>
                           បន្ទប់ប្រជុំ​: <b>អង្គរវត្ត</b>
@@ -62,9 +75,62 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="left-detail">
+              <div className="des">
+                <div className="p-3 d-flex align-items-center ">
+                  <img src="/profile.jpg" alt="profile" />
+                  <div className="ms-4 meeting-info-container">
+                    <div>
+                      <span>
+                        <Badge bg="warning" text="dark" className="mb-2">
+                          កិច្ចប្រជុំបន្ទាប់
+                        </Badge>
+                      </span>
+                      <span className="ms-2">
+                        <FaRegClock size={20} />
+                        <span> ម៉ោង: <b>8:00AM-10:00AM</b></span>
+                      </span>
+                    </div>
+                    <h4 className="mt-1">
+                      កិច្ចប្រជុំពាណិជ្ជកម្មអន្តរជាតិ ជាមួយប្រទេស ចិន និង
+                      ជ្រើសរើសភ្នាក់ងារ
+                    </h4>
+                    <div>
+                      <span>
+                        <FaCalendar size={20} />
+                      </span>
+                      <span className="meeting-date ms-3">
+                        ថ្ងៃច័ន្ទ ទី១៦​ ខែកុម្ភះ​ ឆ្នាំ​២០២៣
+                      </span>
+                    </div>
+                    <p></p>
+                    <hr style={{ border: '1px solid #ced6e0' }} />
+                    <div className="d-flex align-items-center justify-content-between">
+                      <div>
+                        <span className="me-2 ">
+                          <FaRegUserCircle size={20} />
+                        </span>
+                        <span>
+                          ប្រធានអង្គប្រជុំ: <b> Mr.Sok Dara</b>
+                        </span>
+                      </div>
+                      <div>
+                        <span className="me-2">
+                          <FaMapMarkerAlt size={20} />
+                        </span>
+                        <span>
+                          បន្ទប់ប្រជុំ​: <b>អង្គរវត្ត</b>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
           </div>
           <div className="right col-md-7">
-            {/* <div className="right-detail">
+            <div className="right-detail">
               <div className="des">
                 <div className="py-2 d-flex align-items-center justify-content-center">
                   <img src="/profile.jpg" alt="profile" />
@@ -78,7 +144,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
