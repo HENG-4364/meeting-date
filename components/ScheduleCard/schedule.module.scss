@@ -1,0 +1,35 @@
+.left_detail {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+  .des {
+    background: white;
+    border-left: 15px solid red;
+    border-radius: 0 5px 5px 0;
+    width: 100%;
+    .meeting_info_container {
+      width: 100%;
+      overflow: hidden;
+      word-wrap: break-word;
+      h4 {
+        line-height: 32px;
+      }
+    }
+
+    img {
+      width:200px;
+      border-radius: 50%;
+    }
+    h4 {
+      font-family: 'Moul', cursive;
+      font-size: 18px;
+    }
+    .meeting_date {
+      font-family: 'Siemreap', cursive;
+      font-size: 14px;
+    }
+  }
+}
+.transparant {
+  background-color: rgba(241, 237, 237, 0.815) !important;
+}

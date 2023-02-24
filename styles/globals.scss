@@ -8,71 +8,54 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  .left {
-    background: #297fb9b2;
-    padding: 0;
-    height: 100%;
-    .logo {
-      width: 100%;
-      height: 10%;
-      border-bottom: 1px solid rgb(255, 255, 255);
-      img {
-        height: 100%;
-        padding: 1%;
-      }
-    }
-    .left-detail {
-      display: flex;
-      align-items: center;
-      padding: 20px 20px 0 20px;
-      .des {
-        background: white;
-        border-left: 15px solid red;
-        border-radius: 0 5px 5px 0;
+  .meeting-detail {
+    height: 100vh;
+    .left {
+      background: #297fb9b2;
+      padding: 0;
+      height: 100%;
+      .header {
         width: 100%;
-        .meeting-info-container {
-          width: 100%;
-          overflow: hidden;
-          word-wrap: break-word;
-          h4{
-            line-height: 32px;
+        height: 10%;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          height: 100%;
+          img {
+            height: 100%;
+            padding: 1%;
           }
         }
+        .date {
+          p {
+            color: white;
+            padding: 5px;
+            margin: 0;
+            font-family: 'Moul', cursive;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .right {
+      background: rgba(0, 0, 0, 0.479);
+      padding: 0;
+      .right-detail {
+        height: 100%;
+        .des_schedule {
+          position: relative;
+          top: 10%;
+          .transparant {
+            background-color: rgba(241, 237, 237, 0.815) !important;
+          }
+        }
+      }
+    }
+  }
+}
 
-        img {
-          width: 20%;
-          border-radius: 50%;
-        }
-        h4 {
-          font-family: 'Moul', cursive;
-          font-size: 18px;
-        }
-        .meeting-date {
-          font-family: 'Siemreap', cursive;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-  .right {
-    background: rgba(0, 0, 0, 0.301);
-    padding: 0;
-    height: 100%;
-    .right-detail {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      color: white;
-      .des {
-        margin: 5%;
-        width: 100%;
-        background: #297fb99a;
-        border-radius: 5px;
-        img {
-          width: 20%;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
+.swiper-container {
+  height: 90vh;
 }
