@@ -1,19 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
-import { Badge } from 'react-bootstrap';
-import {
-  FaRegUserCircle,
-  FaMapMarkerAlt,
-  FaRegClock,
-  FaCalendar,
-} from 'react-icons/fa';
-import { BiMap } from 'react-icons/Bi';
+
 import ScheduleCard from '@/components/ScheduleCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
 SwiperCore.use([Pagination, Autoplay]);
-import Clock from '@/components/Time';
 import { data } from '@/data/data';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 export default function Home() {
   return (
     <>
@@ -26,29 +17,31 @@ export default function Home() {
               </div>
               <div className="date">
                 <p>ថ្ងៃសុក្រ ១២រោច ខែមាឃ ឆ្នាំខាល ចត្វាស័ក ពុទ្ធសករាជ​ ២៥៦៦</p>
-                <p style={{ float: 'right' }}>{/* <Clock /> */}</p>
               </div>
             </div>
-            <div className='overflow-hidden'>
-              <Swiper
-              loop={true}
-                direction="vertical"
-                slidesPerView={3}
-                autoplay={{
-                  delay: 4000,
-                }}
-                
+            <div className="overflow-hidden">
+              <CarouselProvider
+                visibleSlides={3}
+                totalSlides={data.length}
+                orientation="vertical"
+                naturalSlideWidth={400}
+                naturalSlideHeight={140}
+                isPlaying={true}
+                infinite={true}
+                lockOnWindowScroll={true}
               >
-                {data.map((item) => {
-                  return (
-                    <>
-                      <SwiperSlide >
-                        <ScheduleCard data={item} />
-                      </SwiperSlide>
-                    </>
-                  );
-                })}
-              </Swiper>
+                <Slider>
+                  {data.map((item, idx) => {
+                    return (
+                      <>
+                        <Slide index={idx}>
+                          <ScheduleCard data={item} />
+                        </Slide>
+                      </>
+                    );
+                  })}
+                </Slider>
+              </CarouselProvider>
             </div>
           </div>
           <div className="right col-12 col-lg-7">

@@ -40,9 +40,7 @@ export default function ScheduleCard({ mode, data }: ScheduleCardProp) {
                   </span>
                 </span>
               </div>
-              <h4 className="mt-1">
-                {data?.title}
-              </h4>
+              <h4 className="mt-1">{data?.title}</h4>
               <div>
                 <span>
                   <FaCalendar size={20} />
